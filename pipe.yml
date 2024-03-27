@@ -1,13 +1,18 @@
-name: poc-pipe
-image: j1209/poc-pipe:1.0.0
+name: bitbucket-pipe
+image: j1209/bitbucket-pipe:1.0.0
 description: Custom pipe to run SCA and SAST security scans
 category: Security
-repository: https://bitbucket.org/sys-dsi/poc-pipe
+repository: https://github.com/jahid1209/bitbucket-pipe
 vendor:
-  name: DSi
-  website: https://dsinnovators.com
+  name: Jahid
+  website: https://github.com/jahid1209
 maintainer:
-  name: DSi
-  website: https://dsinnovators.com
+  name: Jahid
+  website: https://github.com/jahid1209
 tags:
     - Security
+    - pipelines
+    - pipes
+    - bitbucket
+    - downloads
+    - file

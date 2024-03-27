@@ -20,7 +20,7 @@ schema = {
 }
 
 
-class PocPipe(Pipe):
+class BitbucketPipe(Pipe):
     def __init__(self, pipe_metadata=None, schema=None, env=None, check_for_newer_version=False):
         super().__init__(
             pipe_metadata=pipe_metadata,
@@ -51,7 +51,7 @@ class PocPipe(Pipe):
         # uncomment me before docker deployment 
         logger.info("Downloading bridge....")
         downloaded_bridge_path = download_bridge(self.blackduck_download_url)
-        logger.info(f" Downloaded_bridge_path {downloaded_bridge_path}")
+        logger.info(f"Downloaded_bridge_path {downloaded_bridge_path}")
         
         # for local testing only
         # comment me before docker deployment
@@ -76,12 +76,12 @@ class PocPipe(Pipe):
 
 
 if __name__ == '__main__':
-    # pipe = PocPipe(pipe_metadata='/pipe.yml', schema=schema)
+    # pipe = BitbucketPipe(pipe_metadata='/pipe.yml', schema=schema)
 
     # remove '/' from  /pipe.yml to run locally
     # add /pipe.yml before docker deployment
     with open('/pipe.yml', 'r') as metadata_file:
         metadata = yaml.safe_load(metadata_file.read())
     
-    pipe = PocPipe(schema=schema, pipe_metadata=metadata, check_for_newer_version=True)
+    pipe = BitbucketPipe(schema=schema, pipe_metadata=metadata, check_for_newer_version=True)
     pipe.run()
