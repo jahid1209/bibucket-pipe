@@ -1,0 +1,13 @@
+name: poc-pipe
+image: j1209/poc-pipe:1.0.0
+description: Custom pipe to run SCA and SAST security scans
+category: Security
+repository: https://bitbucket.org/sys-dsi/poc-pipe
+vendor:
+  name: DSi
+  website: https://dsinnovators.com
+maintainer:
+  name: DSi
+  website: https://dsinnovators.com
+tags:
+    - Security

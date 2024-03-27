@@ -1,0 +1,17 @@
+.idea
+*.iml
+.pytest_cache
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+vars.sh
+.bridge/
+new-bridge
+delete_me.py
