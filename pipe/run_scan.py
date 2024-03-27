@@ -5,10 +5,8 @@ import subprocess
 def invoke_synopsys_bridge(extracted_directory, input_json):
     bridge_executable_path = os.path.join(extracted_directory, "synopsys-bridge")
 
-    # Command to execute
     command = [bridge_executable_path, "--stage", "blackduck", "--input", input_json]
 
-    # Invoke the command using subprocess
     return_code = subprocess.call(command)
 
     return return_code
