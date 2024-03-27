@@ -7,7 +7,6 @@ from prepare_bridge_input import prepare_blackduck_input_json, print_json
 from run_scan import invoke_synopsys_bridge
 from upload_artifacts import upload_sarif, upload_diagnostics
 
-
 logger = get_logger()
 
 schema = {

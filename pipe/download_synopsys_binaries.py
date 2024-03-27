@@ -23,7 +23,6 @@ def download_bridge(url):
 def print_directory_files():
     files = os.listdir(".")
 
-    # Print the list of files
     print(f"Files in current directory")
     for file in files:
         print(file)

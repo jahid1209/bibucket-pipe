@@ -18,13 +18,11 @@ def prepare_blackduck_input_json(url, token):
         }
     }
 
-    # Convert the dictionary to a JSON string
     json_string = json.dumps(data, indent=4)
 
     home_dir = expanduser("~")
     json_file_path = os.path.join(home_dir, "bd_input.json")
 
-    # Write the JSON string to the file
     with open(json_file_path, "w") as json_file:
         json_file.write(json_string)
 
@@ -35,7 +33,6 @@ def prepare_blackduck_input_json(url, token):
 
 def print_json(input_json_path):
     try:
-        # Open the JSON file
         with open(input_json_path, 'r') as file:
             # Load the JSON data
             json_data = json.load(file)
